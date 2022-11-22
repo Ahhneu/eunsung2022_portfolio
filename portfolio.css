@@ -1,0 +1,885 @@
+@charset "utf-8";
+*{margin:0; padding:0;box-sizing: border-box;}
+ul{list-style-type:none;}
+a{text-decoration:none; color:black;}
+body{font-size: 15px;
+    font-family: 'SCDreamM';}
+.clearfix::after{
+    display: block;
+    content:"";
+    clear:both;
+}
+@font-face {
+    font-family: 'SCDreamL';
+    src: url("../fonts/SCDream2.otf") format('truetype');
+}
+@font-face {
+    font-family: 'SCDreamM';
+    src: url("../fonts/SCDream4.otf") format('truetype');
+}
+@font-face {
+    font-family: 'SCDreamB';
+    src: url("../fonts/SCDream9.otf") format('truetype');
+}
+#wrap{
+    min-width:100%;
+    margin:auto;
+}
+/*popup*/
+#popup-wrap{-position:relative; }
+#popup-wrap .popup{display:none; width:600px; height:600px;position:absolute;top:4200px; left:calc(50% - 300px);z-index: 999;background-color: #fff;}
+#popup-wrap .popup .img{width:600px;-margin:10px;height:600px;overflow: scroll; text-align: center;}
+#popup-wrap .popup .img img{width: 600px;
+    height: auto;
+    overflow: scroll;}
+#popup-wrap .popup:not(:first-child){display: none;}
+#popup-wrap .popup h1{font-size: 15px; padding-left:10px; width:600px; height:30px; line-height: 30px; background-color: #a3aac8;}
+
+/*header-start*/
+#header{
+    width:10%;
+    height:1000px;
+    background-color:rgba(0,0,0,0.6);
+    float:left;
+    position:fixed;
+    z-index: 10;
+}
+#header ul{
+    width:100px;
+    height:200px;
+    margin-top:700px;
+    margin-right:30px;
+    float:right;
+}
+#header ul li{
+    width:100px;
+    height:50px;
+    display: inline-block;
+    line-height:2.0;
+}
+#header ul li a{
+    color:#fff;
+}
+#header ul li:hover a{
+    color:#32599a;
+    font-family: 'SCDreamB';
+}
+/*main-start*/
+#main{
+    width:1500px;
+    height:1000px;
+}
+#main .video-wrap{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    top:0;
+    left:0;
+    overflow:hidden;
+}
+#main .video-wrap video{
+    min-width: 100%;
+    min-height: 100%;
+}
+#main #main-contents{
+    position:absolute;
+    width:90%;
+    right:0;
+    top:0;
+    background-color: rgba(0,0,0,0.8);
+    height:1000px;
+    z-index:2;
+    text-align: center;
+}
+#main #main-contents img{
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    margin-top:250px;
+}
+#main #main-contents h1{
+    color:#fff;
+    font-size:80px;
+    margin-top:50px;
+    font-family: 'SCDreamL';
+}
+#main #main-contents p{
+    color: #fff;
+    font-size: 17px;
+    font-family: 'SCDreamL';
+    line-height:1.6;
+    margin-bottom:30px;
+}
+#main span{
+    width:100px;
+    height:50px;
+    display: block;
+    margin:auto;
+    background: url("../img/downpage.png") no-repeat;
+}
+/*intro-start*/
+#intro{
+    position:absolute;
+    right:0;
+    width:90%;
+    height:1000px;
+    background-color:#fff;
+}
+h1.title{
+    padding: 80px;
+    font-size: 60px;
+    font-family: 'SCDreamB';
+    color:#32599a;
+}
+#intro .top{
+    padding-left:80px;
+    margin-bottom:50px;
+}
+#intro .top p{
+    font-size: 60px;
+    font-family: 'SCDreamL';
+    color:#000;
+    width:800px;
+    float:left;
+
+}
+#intro .top ul.info{
+    margin-top:120px;
+    width:500px;
+    float:left;
+}
+#intro .top ul.info li{
+    height:30px;
+}
+#intro .top ul.info li span.text{
+    width:120px;
+    display: inline-block;
+    font-family: 'SCDreamB';
+    font-size: 15px;
+    color: #32599a;
+}
+#intro .bottom{
+    padding:80px;
+}
+#intro .bottom ul.name{
+    width:1300px;
+    -border:1px solid red;
+    margin-bottom:20px;
+}
+#intro .bottom ul.name li{
+    display: inline-block;
+    width:650px;
+    float:left;
+    color: #32599a;
+    font-family: 'SCDreamB';
+}
+#intro .bottom ul.experience{
+    width:650px;
+    float:left;
+}
+#intro .bottom ul span.date{
+    width:200px;
+    display: inline-block;
+}
+#intro .bottom ul li{
+    height:30px;
+}
+.media-2{
+    display:none;
+}
+/*skills-start*/
+#skills{
+    position: absolute;
+    right: 0;
+    top:2000px;
+    width:90%;
+    height:1000px;
+    background-color:#32599a;
+}
+#skills h1{
+    color:#fff;
+}
+#skills .skill{
+    padding-left:80px;
+}
+#skills .skill ul{
+    width:1500px;
+    height:700px;
+    -border:1px solid #fff;
+    margin:auto;
+}
+#skills .skill ul li{
+    display:inline-block;
+    width:300px;
+    height:300px;
+    float:left;
+   -border: 1px solid red;
+    margin-right:150px;
+    margin-bottom:40px;
+}
+#skills .skill ul li:nth-child(3),
+#skills .skill ul li:last-child{
+    margin-right:0;
+}
+#skills .skill ul li p.percent{
+    font-size: 40px;
+    font-family: 'SCDreamB';
+    color:#FFF;
+    text-align:right;
+}
+#skills .skill ul li div.line{
+    width:300px;
+    height:15px;
+    background-color: #a3aac8;
+    border-radius:5px;
+    position:relative;
+    margin-top:10px;
+}
+#skills .skill ul li div.line .whiteline{
+    width:280px;
+    height:15px;
+    position:absolute;
+    background-color:#fff;
+    border-radius: 5px;
+}
+#skills .skill ul li:nth-child(2) div.line .whiteline{
+    width:260px;
+}
+#skills .skill ul li:nth-child(3) div.line .whiteline {
+    width: 100px;
+}
+#skills .skill ul li:nth-child(4) div.line .whiteline {
+    width: 270px;
+}
+
+#skills .skill ul li h3{
+    text-align:center;
+    color:#fff;
+    font-size: 30px;
+    margin-top:20px;
+}
+#skills .skill ul li p{
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    margin-top: 20px;
+}
+/*portfolio-start*/
+#portfolio{
+    position: absolute;
+    right: 0;
+    top: 3000px;
+    width:90%;
+    height:2000px;
+    background-color:#fff;
+}
+#portfolio .web,.edit,.graphic{
+    margin-left:80px;
+    margin-top:100px;
+    width:1500px;
+    height:400px;
+}
+#portfolio h1.sub-title{
+    font-size: 40px;
+    font-family: 'SCDreamL';
+    width:300px;
+    height:300px;
+    margin-left:50px;
+    float:left;
+}
+#portfolio .web .circle-wrap{
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    -border:1px solid red;
+    float:left;
+    margin-right:50px;
+    position:relative;
+    overflow:hidden;
+}
+.circle-wrap .img{
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    background: url("../img/aesob_icon.jpeg") no-repeat -70px 0px;
+    background-size: cover;
+    transition:transform 0.6s;
+}
+.circle-wrap:nth-child(2) .img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: url("../img/saramin-icon.png") no-repeat -150px 0px;
+    background-size: cover;
+}
+.circle-wrap .black-bg{
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.3);
+    position:absolute;
+}
+.circle-wrap .img p{
+    color:#fff;
+    width:200px;
+    text-align: center;
+    padding-top:90px;
+    position: absolute;
+    z-index:1;
+    font-size: 20px;
+}
+.circle-wrap:hover .img{
+    transform: scale(1.2,1.2);
+}
+.edit ul li .box-wrap{
+    width:200px;
+    height:200px;
+    float:left;
+    margin-right:50px;
+    overflow: hidden;
+}
+.edit ul li:last-child .box-wrap{
+    margin-right: 0px;
+}
+.edit ul li .box-wrap .box-img {
+    width: 200px;
+    height: 200px;
+    background: url('../img/IMG_5685.JPG') no-repeat;
+    background-size: cover;
+    transition: transform 0.6s;
+}
+.edit .box-wrap:hover .box-img{
+    transform: scale(1.2,1.2);
+}
+.edit ul li:nth-child(2) .box-wrap .box-img {
+    background: url('../img/irang-main.png') no-repeat -50px 0px;
+    background-size: cover;
+}
+.edit ul li:nth-child(3) .box-wrap .box-img {
+    background: url('../img/brosure-main.png') no-repeat -50px 0px;
+    background-size: cover;
+}
+.edit ul li:last-child .box-wrap .box-img{
+    background: url('../img/pitchingbook.png') no-repeat;
+    background-size: cover;
+}
+/*edit-popup*/
+#editpopup-wrap .editpopup {
+    display: none;
+    width: 600px;
+    height: auto;
+    position: absolute;
+    top: 3600px;
+    left: calc(50% - 300px);
+    z-index: 999;
+    background-color: #fff;
+    border:1px solid #333;
+}
+
+#editpopup-wrap .editpopup .img {
+    width: 600px;
+    margin-top: 30px;
+    height: 600px;
+    overflow: scroll;
+    text-align: center;
+
+}
+
+#editpopup-wrap .editpopup .img img {
+    width: 550px;
+    height: auto;
+    overflow: scroll;
+}
+
+#editpopup-wrap .editpopup:not(:first-child) {
+    display: none;
+}
+
+#editpopup-wrap .editpopup h1 {
+    font-size: 15px;
+    padding-left: 10px;
+    width: 590px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #c195e5;
+}
+/*graphic*/
+.graphic ul li .box-wrap {
+    width: 200px;
+    height: 200px;
+    -border: 1px solid red;
+    float: left;
+    margin-right: 50px;
+    margin-bottom:50px;
+    overflow: hidden;
+}
+.graphic ul li .box-wrap .box-img{
+    width:200px;
+    height:200px;
+    background: url('../img/cardnews.png') no-repeat;
+    background-size: cover;
+    transition:transform 0.6s;
+}
+.graphic .box-wrap:hover .box-img {
+    transform: scale(1.2, 1.2);
+}
+.graphic ul li:nth-child(2) .box-wrap .box-img {
+    background: url('../img/cardnews-2.png') no-repeat;
+    background-size: cover;
+}
+.graphic ul li:nth-child(3) .box-wrap .box-img {
+    background: url('../img/landingpage.jpg') no-repeat -30px;
+    background-size: cover;
+}
+.graphic ul li:nth-child(4) .box-wrap .box-img {
+    background: url('../img/pitching-poster.png') no-repeat;
+    background-size: cover;
+}
+.graphic ul li:nth-child(5) .box-wrap .box-img {
+    background: url('../img/business-meeting.png') no-repeat;
+    background-size: cover;
+}
+.graphic ul li:nth-child(6) .box-wrap .box-img {
+    background: url('../img/CurvedBillboard.png') no-repeat;
+    background-size: cover;
+}
+.graphic ul li:nth-child(7) .box-wrap .box-img {
+    background: url('../img/w6rc-main.png') no-repeat;
+    background-size: cover;
+}
+.graphic ul li:nth-child(8) .box-wrap .box-img {
+    background: url('../img/wasabi.jpg') no-repeat;
+    background-size: cover;
+}
+/*footer-start*/
+#footer{
+    position: absolute;
+    right: 0;
+    top: 5000px;
+    width: 90%;
+    height:200px;
+    background-color:#333;
+    
+}
+#footer h1{
+    color: #fff;
+    width:300px;
+    -border:1px solid #fff;
+    float:left;
+    padding-bottom:0;
+}
+#footer span.line{
+    width:200px;
+    height:1px;
+    background-color: #fff;
+    display: block;
+    float: left;
+    margin-top:120px;
+}
+#footer ul{
+    width:500px;
+    margin-top:80px;
+    margin-left:50px;
+    color:#FFF;
+    font-family: 'SCDreamM';
+    font-size: 20px;
+    float:left;
+}
+#footer ul li{
+    height:40px;
+}
+#footer ul li>span{
+    font-size: 13px;
+}
+
+@media screen and (max-width:1500px) {
+    #wrap {
+        width: 1500px;
+        margin: auto;
+        position: relative;
+    }
+
+    #header {
+        width: 200px;
+        height: 1000px;
+    }
+
+    #header ul {
+        margin-top: 400px;
+        margin-right: 30px;
+        float: right;
+    }
+   
+    #main #main-contents {
+        width: 1300px;
+        position: absolute;
+        right: 0;
+        -border:1px solid red;
+    }
+    h1.title{font-size: 40px;
+        margin-bottom:10px;
+    }
+    #intro{
+        width:1300px;
+    }
+    #intro .top p{
+        font-size: 50px;
+        line-height: 1.2;
+        width: 600px;
+    }
+    #intro .top ul.info {
+        margin-top: 100px;
+        width: 400px;
+        float: left;
+    }
+    #intro .top ul.info li{
+        font-size: 13px;
+
+    }  
+    #skills{
+        width:1300px;
+    }
+    #skills .skill ul {
+        width: 1000px;
+        -border: 1px solid #fff;
+        margin: auto;
+    }
+    #skills .skill ul li {
+        display: inline-block;
+        width: 250px;
+        height: 250px;
+        float: left;
+        -border: 1px solid red;
+        margin-right: 60px;
+        margin-bottom: 80px;
+    }
+    #skills .skill ul li p.percent {
+        font-size: 30px;
+    }
+    #skills .skill ul li div.line {
+        width: 250px;
+    }
+    #skills .skill ul li div.line .whiteline {
+        width: 240px;
+    }
+    #skills .skill ul li:nth-child(2) div.line .whiteline {
+        width: 230px;
+    }
+    #skills .skill ul li:nth-child(3) div.line .whiteline {
+        width: 80px;
+    }
+    #skills .skill ul li:nth-child(4) div.line .whiteline {
+        width: 220px;
+    }
+    /*portfolio*/
+    #portfolio{
+        width:1300px;
+        height:2200px;
+    }
+    #portfolio .web,.edit,.graphic {
+        width: 1200px;
+    }
+    #portfolio .web h1.sub-title {
+        margin-right: 30px;
+    }
+    .graphic{
+        margin-top:150px;
+    }
+    .graphic ul{
+        width:800px;
+        height:600px;
+        float:left;
+    }
+    #footer{
+        width:1300px;
+        top:5200px;
+    }
+}
+@media screen and (max-width:500px){
+    #wrap{
+        width:480px;
+        position: relative;
+    }
+    
+    #header{
+        width:480px;
+        height:50px;
+        float:inherit;
+    }
+    #header ul{
+        width:480px;
+        height:50px;
+        text-align: center;
+        margin:auto;
+        margin-top:10px;
+        display: block;
+    }
+    #header ul li{
+        height:13px;
+        width:70px;
+        -border-bottom:1px solid #32599a;
+        display: inline-block;
+    }
+    #header ul li a{
+        color:#fff;
+        font-size: 10px;
+        font-family: 'SCDreamM';
+    }
+
+    #main{
+        width:480px;
+        height:500px;
+    }
+    #main #main-contents{
+        position: absolute;
+        left:0;
+        width:inherit;
+        height: 500px;
+        -border:1px solid red;
+
+    }
+        #main #main-contents img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-top: 100px;
+        }
+    
+        #main #main-contents h1 {
+            color: #fff;
+            font-size: 50px;
+            margin-top: 30px;
+            font-family: 'SCDreamL';
+            text-align: inherit;
+        }
+    
+        #main #main-contents p {
+            color: #fff;
+            font-size: 13px;
+            font-family: 'SCDreamL';
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+    
+        #main span {
+            width: 100px;
+            height: 50px;
+            display: block;
+            margin: auto;
+            background: url("../img/downpage.png") no-repeat;
+        }
+        #intro, #portfolio, #skills  {
+            width: 480px;
+            height:3000px;
+        }
+        #intro{
+            position:absolute; 
+            left:0;
+            width: 480px;
+            height: 1300px;
+            background-color: #fff;
+        }
+        h1.title{
+            -border:1px solid red;
+            color:#32599a;
+            width:200px;
+            padding-left:40px;
+        }
+        #intro .top {
+            padding-left:40px;
+        }
+        #intro .top p{
+            font-size: 30px;
+            line-height: 1.4;
+            margin-top:inherit;
+
+        }
+        #intro .bottom{
+            display: none;
+        }
+        .media-2{
+            display:block;
+            padding-left:40px;
+        }
+        .media-2 h2{
+            color:#32599a;
+            font-family: 'SCDreamB';
+            margin-bottom:20px;
+            margin-top:30px;
+        }
+        .media-2 ul li{
+            height:30px;
+            font-size: 12px;
+        }
+        .media-2 ul li span.date{
+            width:200px;
+            display: inline-block;
+        }
+        /*skills*/
+        #skills {
+            width:480px;
+            top: 1800px;
+            height: 1000px;
+        }
+        #skills .skill ul {
+            width: 400px;
+            height: 700px;
+            -border: 1px solid #fff;
+            margin-left:-10px;
+            margin: inherit;
+        }
+        #skills .skill ul li {
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 100px;
+            margin-right:50px;
+        }
+        #skills .skill ul li:nth-child(3){
+            margin-right: 50px;
+        }
+        #skills .skill ul li:nth-child(2n){
+            margin-right: 0;
+        }
+        #skills .skill ul li p.percent {
+            font-size: 40px;
+            font-family: 'SCDreamB';
+            color: #FFF;
+            text-align: right;
+        }
+
+        #skills .skill ul li div.line {
+            width: 150px;
+            height: 10px;
+        }
+
+        #skills .skill ul li div.line .whiteline {
+            width: 130px;
+            height: 10px;
+        }
+
+        #skills .skill ul li:nth-child(2) div.line .whiteline {
+            width: 130px;
+        }
+
+        #skills .skill ul li:nth-child(3) div.line .whiteline {
+            width: 50px;
+        }
+        #skills .skill ul li:nth-child(4) div.line .whiteline {
+            width: 120px;
+        }
+        #skills .skill ul li h3 {
+            font-size: 20px;
+        }
+        #skills .skill ul li p {
+            font-size: 10px;
+            line-height: 1.4;
+        }
+        /*portfolio*/
+        #portfolio {
+            top: 3000px;
+            height:2400px;
+        }
+        #portfolio .web,
+        .edit,
+        .graphic {
+            margin-left: 60px;
+            margin-top: 80px;
+            width: 600px;
+            height: 400px;
+            -border:1px solid red;
+        }
+        .edit{
+            height: 600px;
+        }
+        #portfolio h1.sub-title {
+            font-size: 40px;
+            font-family: 'SCDreamL';
+            width: 100px;
+            height: 30px;
+            -border:1px solid orange;
+            margin-left:0;
+            margin-bottom:50px;
+            float: inherit;
+        }
+        #portfolio .web .circle-wrap {          
+            margin-right: 20px;
+            margin-top:40px;
+           
+        }
+        .edit ul{
+            margin-top:30px;
+            width:400px;
+        }
+        .edit ul li .box-wrap {
+            width: 150px;
+            height: 150px;
+            float: left;
+            margin-right: 50px;
+            margin-bottom:50px;
+            overflow: hidden;
+            
+        }
+        .edit ul li .box-wrap .box-img{
+            width:150px;
+            height:150px;
+            background-size: cover;
+        }
+        .graphic ul {
+            width: 400px;
+
+        }
+        .graphic ul li .box-wrap {
+            width: 150px;
+            height: 150px;
+            -border: 1px solid red;
+            float: left;
+            margin-right: 50px;
+            margin-bottom: 50px;
+            overflow: hidden;
+           
+        }
+        .graphic ul li .box-wrap .box-img {
+            width: 150px;
+            height: 150px;
+            background-size: cover;
+        }
+        #footer{
+            width: 480px;
+            top: 5400px;
+            background-color: inherit;
+        }
+        #footer h1 {
+            color: #fff;
+            width: 200px;
+            
+            float: left;
+            padding-bottom: 0;
+            margin-right: 50px;
+        }
+
+        #footer span.line {
+            width: 50px;
+            height: 1px;
+            background-color: #fff;
+            display: block;
+            float: left;
+            margin-top: 100px;
+        }
+        #footer ul {
+            width: 250px;
+            margin-top: 30px;
+            margin-left: 30px;
+        }
+        #footer ul li{
+            display: block;
+            height:50px;
+            
+            margin-bottom:30px;
+        }
+        #footer ul li span{
+            display:block;
+            margin-bottom:10px;
+        }
+}
